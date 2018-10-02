@@ -10,13 +10,28 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var numOfPeople: UITextField!
-    @IBOutlet weak var tipParcentage: UITextField!
+    @IBOutlet weak var tipAmountLabel: UILabel!
     @IBOutlet weak var billAmount: UITextField!
+//    @IBOutlet weak var tipParcentage: UITextField!
+    @IBOutlet weak var numOfPeople: UITextField!
+    @IBOutlet weak var tipParcentage: UILabel!
+    
+    @IBAction func adjustTipPercentage(_ sender: UISlider) {
+        tipParcentage.text = String(Int(sender.value))
+    }
+    
+    @IBAction func calculateTip(_ sender: Any) {
+        let bill = Int(billAmount.text!)!
+        let tip = Int(tipParcentage.text!)!
+        let people = Int(numOfPeople.text!)!
+        let calculateResult = (bill * tip / 100) / people
+        tipAmountLabel.text = String("$ \(calculateResult)")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         billAmount.delegate = self
+        numOfPeople.delegate = self
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: ViewController.keyboardWillShowNotification, object: nil)
       
@@ -56,9 +71,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+    
     @objc func dismissKeyboard(_ sender: UITapGestureRecognizer) {
         billAmount.resignFirstResponder()
+        numOfPeople.resignFirstResponder()
     }
-
+    
 }
 
