@@ -209,6 +209,9 @@
                                 <rect key="frame" x="123" y="452" width="128" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Secret Passage"/>
+                                <connections>
+                                    <segue destination="1r3-6k-Pzk" kind="show" id="g6N-jB-bH6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -236,7 +239,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Dungeon"/>
                                 <connections>
-                                    <segue destination="oy7-Oy-1bn" kind="show" id="AD7-tp-XTd"/>
+                                    <segue destination="oy7-Oy-1bn" kind="show" id="Mje-ig-952"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jy3-Ch-ldS">
@@ -244,13 +247,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Labratory"/>
                                 <connections>
-                                    <segue destination="7iu-Fq-ffb" kind="show" id="1Sz-s6-fiB"/>
+                                    <segue destination="7iu-Fq-ffb" kind="show" id="4zM-gn-yCz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8Z-F4-cok">
                                 <rect key="frame" x="123" y="556" width="128" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Mysterious lake"/>
+                                <connections>
+                                    <segue destination="sbD-Ea-LF7" kind="show" id="BAg-vC-1hr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  Assignment4
+//  Assignment2
 //
-//  Created by yoshizawarei on 2018/10/01.
+//  Created by yoshizawarei on 2018/10/03.
 //  Copyright © 2018 rei yoshizawa. All rights reserved.
 //
 
@@ -12,7 +12,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
     }
+
 
 }
 
