@@ -32,9 +32,13 @@ class DetailedViewController: UIViewController {
         cityPre.textAlignment = .center
         cityPre.font = UIFont(name: "Helvetica Neue", size: 20)
         
+        let cityIcon = UIImage(named: city.icon)
+        let cityIconView = UIImageView(image: cityIcon)
+        
         view.addSubview(cityLabel)
         view.addSubview(cityTemp)
         view.addSubview(cityPre)
+        view.addSubview(cityIconView)
 
         // Do any additional setup after loading the view.
     }
