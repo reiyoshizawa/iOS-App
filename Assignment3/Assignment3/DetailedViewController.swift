@@ -27,17 +27,24 @@ class DetailedViewController: UIViewController {
         cityTemp.textAlignment = .center
         cityTemp.font = UIFont(name: "Helvetica Neue", size: 20)
     
-        let cityPre = UILabel(frame: CGRect(x: view.bounds.width / 2 - 150, y: view.bounds.height / 2 - 0, width: 300, height: 50))
+        let cityPre = UILabel(frame: CGRect(x: view.bounds.width / 2 - 150, y: view.bounds.height / 2 - 25, width: 300, height: 50))
         cityPre.text = "Precipitation is \(city.precipitation)"
         cityPre.textAlignment = .center
         cityPre.font = UIFont(name: "Helvetica Neue", size: 20)
         
+        let citySum = UILabel(frame: CGRect(x: view.bounds.width / 2 - 150, y: view.bounds.height / 2 - 0, width: 300, height: 50))
+        citySum.text = "Summary is \(city.summary)"
+        citySum.textAlignment = .center
+        citySum.font = UIFont(name: "Helvetica Neue", size: 20)
+        
         let cityIcon = UIImage(named: city.icon)
         let cityIconView = UIImageView(image: cityIcon)
+        cityIconView.alignmentRect(forFrame: CGRect(x: view.bounds.width / 2, y: view.bounds.height / 2, width: 100, height: 100))
         
         view.addSubview(cityLabel)
         view.addSubview(cityTemp)
         view.addSubview(cityPre)
+        view.addSubview(citySum)
         view.addSubview(cityIconView)
 
         // Do any additional setup after loading the view.
