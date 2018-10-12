@@ -48,6 +48,9 @@
                                         <constraint firstItem="QfJ-BN-OjC" firstAttribute="leading" secondItem="a1S-7c-4AA" secondAttribute="leading" constant="20" id="VO7-Ty-nIT"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Xbd-Ch-dL3" kind="show" identifier="EditItemSegue" trigger="accessoryAction" id="Bmv-zP-Slq"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -58,7 +61,7 @@
                     <navigationItem key="navigationItem" title="Todo Items" largeTitleDisplayMode="always" id="6d3-5Z-xzo">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Cqu-2q-xPU">
                             <connections>
-                                <segue destination="Xbd-Ch-dL3" kind="show" id="Sxs-3k-izp"/>
+                                <segue destination="Xbd-Ch-dL3" kind="show" identifier="AddItemSegue" id="Sxs-3k-izp"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -154,4 +157,7 @@
             <point key="canvasLocation" x="798.55072463768124" y="130.58035714285714"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Bmv-zP-Slq"/>
+    </inferredMetricsTieBreakers>
 </document>
