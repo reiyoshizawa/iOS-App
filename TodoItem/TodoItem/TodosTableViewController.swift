@@ -22,13 +22,17 @@ class TodosTableViewController: UITableViewController {
     // Todo: Fix
     @IBAction func deleteTodoItems(_ sender: UIBarButtonItem) {
         // check if there are any items selected
-        if let selectedRows = tableView.indexPathsForSelectedRows {
-            var items = [TodoItem]()
+        if var selectedRows = tableView.indexPathsForSelectedRows {
+            selectedRows.sort { $0.row > $1.row }
             for indexPath in selectedRows {
-                items.append(todoList.todos[indexPath.row])
+                if let priority = priorityForSectionIndex(indexPath.section) {
+                    let priorityTodos = todoList.todoList(for: priority)
+//                    let rowToDelete = indexPath.row > priorityTodos.count - 1 ? priorityTodos.count - 1 : indexPath.row
+                    let item = priorityTodos[indexPath.row]
+                    todoList.remove(item: item, from: priority, at: indexPath.row)
+                }
             }
-            // remove from model
-            todoList.remove(items: items)
+            
             // remove from tableview
             tableView.beginUpdates()
             tableView.deleteRows(at: selectedRows, with: .automatic)
@@ -154,7 +158,13 @@ class TodosTableViewController: UITableViewController {
     // TODO: FIX
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         // change model
-//        todoList.move(item: todoList.todos[sourceIndexPath.row], to: destinationIndexPath.row)
+        if let srcPriority = priorityForSectionIndex(sourceIndexPath.section),
+            let destPriority = priorityForSectionIndex(destinationIndexPath.section) {
+            
+            let item = todoList.todoList(for: srcPriority)[sourceIndexPath.row]
+            todoList.move(item: item, from: srcPriority, at: sourceIndexPath, to: destPriority, at: destinationIndexPath)
+        }
+        
         // update tableview
         tableView.reloadData() // calls datasource methods again
     }
