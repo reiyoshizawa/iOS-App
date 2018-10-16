@@ -9,7 +9,7 @@
 import UIKit
 
 protocol AddItemViewControllerDelegate: class {
-    func addItemCancel()
+    func addItemDidCancel()
     func addItemDidFinishAdding(_ item: TodoItem)
     func addItemDidFinishEditing(_ item: TodoItem)
 }
@@ -23,7 +23,7 @@ class AddItemTableViewController: UITableViewController {
     weak var itemToEdit: TodoItem?
     
     @IBAction func cancel(_ sender: UIBarButtonItem) {
-        delegate?.addItemCancel()
+        delegate?.addItemDidCancel()
     }
     
     @IBAction func done(_ sender: UIBarButtonItem) {

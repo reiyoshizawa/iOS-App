@@ -15,6 +15,7 @@
 		26C49AE9216FB534005147FF /* AddItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C49AE8216FB534005147FF /* AddItemTableViewController.swift */; };
 		26C49AEB216FD526005147FF /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C49AEA216FD526005147FF /* TodoItem.swift */; };
 		26C49AED216FD58B005147FF /* TodoItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C49AEC216FD58B005147FF /* TodoItems.swift */; };
+		26C49AEF2174F356005147FF /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C49AEE2174F356005147FF /* TodoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		26C49AE8216FB534005147FF /* AddItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemTableViewController.swift; sourceTree = "<group>"; };
 		26C49AEA216FD526005147FF /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
 		26C49AEC216FD58B005147FF /* TodoItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItems.swift; sourceTree = "<group>"; };
+		26C49AEE2174F356005147FF /* TodoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				26C49AE0216FAA30005147FF /* Info.plist */,
 				26C49AEA216FD526005147FF /* TodoItem.swift */,
 				26C49AEC216FD58B005147FF /* TodoItems.swift */,
+				26C49AEE2174F356005147FF /* TodoTableViewCell.swift */,
 			);
 			path = TodoItem;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				26C49AD5216FAA2A005147FF /* AppDelegate.swift in Sources */,
 				26C49AE7216FAB63005147FF /* TodosTableViewController.swift in Sources */,
 				26C49AEB216FD526005147FF /* TodoItem.swift in Sources */,
+				26C49AEF2174F356005147FF /* TodoTableViewCell.swift in Sources */,
 				26C49AED216FD58B005147FF /* TodoItems.swift in Sources */,
 				26C49AE9216FB534005147FF /* AddItemTableViewController.swift in Sources */,
 			);
